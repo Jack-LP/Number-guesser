@@ -1,0 +1,91 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: 1.6rem;
+  color: white;
+  background-image: linear-gradient(
+      0deg,
+      rgba(45, 45, 45, 0.658) 0%,
+      rgba(45, 45, 45, 0.5060224773503151) 100%
+    ),
+    url(../img/bgImg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: min(90%, 40rem);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2d2d2dd0;
+  padding: 3rem;
+  width: 100%;
+  gap: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.guess-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-family: $bodyFont;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: $blue;
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-family: $bodyFont;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: $green;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
